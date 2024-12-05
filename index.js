@@ -1,5 +1,4 @@
 const express = require("express");
-const connectDB = require("./db");
 const path = require("path");
 const { postRequest } = require("./services/apiService");
 require("dotenv").config();
