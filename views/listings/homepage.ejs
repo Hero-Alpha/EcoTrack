@@ -1,0 +1,196 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrack - Sustainable Shipping Solutions</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head> -->
+<% layout("/layouts/boilerplate") %>
+
+<body>
+
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content slide-in">
+                <h1>Sustainable Shipping Made Simple</h1>
+                <p class="hero-text">EcoTrack helps track shipping and reduce carbon emissions with smart tools.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary pulse">Get Started</button>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- How It Works Section -->
+    <section id="about" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How EcoTrack Works</h2>
+            <p class="section-subtitle">Simple steps to sustainable shipping</p>
+
+            <div class="steps-container">
+                <div class="step-card zoom-in">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3 class="step-title">Upload Shipment Data</h3>
+                    <p class="step-description">Easily upload your shipping data through our platform or API
+                        integration.</p>
+                </div>
+
+                <div class="step-card zoom-in">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="step-title">Analyze Carbon Footprint</h3>
+                    <p class="step-description">Our algorithms calculate the carbon emissions for each shipment.</p>
+                </div>
+
+                <div class="step-card zoom-in">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="step-title">Optimize & Reduce</h3>
+                    <p class="step-description">Get recommendations to reduce emissions and track your progress.</p>
+                </div>
+            </div>
+
+            <div class="cta-button">
+                <button class="btn btn-primary btn-partner">Become a Partner</button>
+            </div>
+        </div>
+    </section>
+
+    j
+    <!-- Carbon Emission Section -->
+    <section id="carbon" class="carbon-section">
+        <div class="container">
+            <h2 class="section-title">Our Carbon Impact</h2>
+            <p class="section-subtitle">Helping businesses reduce their environmental footprint</p>
+
+            <div class="carbon-stats">
+                <div class="stat-card flip-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="stat-number" data-count="12500">0</div>
+                    <div class="stat-label">Trees Saved</div>
+                </div>
+
+                <div class="stat-card flip-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-smog"></i>
+                    </div>
+                    <div class="stat-number" data-count="8450">0</div>
+                    <div class="stat-label">Tons of CO₂ Reduced</div>
+                </div>
+
+                <div class="stat-card flip-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <div class="stat-number" data-count="320">0</div>
+                    <div class="stat-label">Partner Companies</div>
+                </div>
+
+                <div class="stat-card flip-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="stat-number" data-count="125000">0</div>
+                    <div class="stat-label">Shipments Optimized</div>
+                </div>
+            </div>
+
+            <div class="carbon-visual">
+                <div class="visual-container">
+                    <div class="co2-reduction-bar">
+                        <div class="reduction-fill" style="width: 0%" data-width="78%"></div>
+                    </div>
+                    <div class="visual-label">Average CO₂ Reduction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch with our sustainability experts</p>
+
+            <div class="contact-container">
+                <div class="contact-info slide-in-left">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email Us</h3>
+                            <p>info@ecotrack.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Call Us</h3>
+                            <p>+91 1234567890</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Visit Us</h3>
+                            <p>123 Green Street, Eco City, EC 12345</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form slide-in-right">
+                    <form id="contactForm" class="form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Name</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script src="js/main.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+
+</html>
