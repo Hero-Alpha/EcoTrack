@@ -22,7 +22,7 @@ const vehicleSchema = Joi.object({
   model: Joi.string().required(),
   type: Joi.string().valid('truck', 'van', 'bike', 'car').required(),
   numberPlate: Joi.string().required(),
-  capacity: Joi.number().min(0).required(), // in kg or tons
+  capacity: Joi.number().min(0).required(), 
   fuelType: Joi.string().valid('diesel', 'petrol', 'electric', 'CNG').required()
 });
 
