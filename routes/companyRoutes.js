@@ -12,6 +12,11 @@ router.get("/companySignup", (req, res) => {
   res.render("listings/companySignup"); 
 });
 
+// routes/companyRoutes.js or a common router file
+router.get('/userHome', (req, res) => {
+  res.render('userHome');
+});
+
 
 // Create company (signup)
 router.post("/signup", companyController.validateCompany, companyController.createCompany);
