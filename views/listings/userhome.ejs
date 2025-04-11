@@ -1,8 +1,11 @@
-<% layout("/layouts/boilerplate-user")  %>
+<% layout("/layouts/boilerplate-user") %>
 
-    <link rel="stylesheet" href="css/userHome.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+<!-- Load userHome styles here -->
+<link rel="stylesheet" href="/css/userHome.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 
+<!-- Optional: wrapper div for safe scoping -->
+<div class="user-home-wrapper">
     <div class="container">
         <main>
             <section class="home-cards">
@@ -25,3 +28,4 @@
             </section>
         </main>
     </div>
+</div>

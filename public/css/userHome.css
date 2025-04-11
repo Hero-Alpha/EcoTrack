@@ -1,22 +1,21 @@
-/* Reset CSS */
-* {
+/* Scoped to .user-home-wrapper to avoid homepage interference */
+.user-home-wrapper * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
 }
 
-/* Body */
-body {
+/* Wrapper Container */
+.user-home-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: #f9fafb;
 }
 
-
 /* Main Content */
-main {
+.user-home-wrapper main {
     flex-grow: 1;
     padding: 20px;
     display: flex;
@@ -26,15 +25,16 @@ main {
 }
 
 /* Cards Section */
-.home-cards {
+.user-home-wrapper .home-cards {
     display: flex;
     gap: 30px;
     justify-content: center;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 /* Card Styling */
-.card {
+.user-home-wrapper .card {
     width: 300px;
     height: 300px;
     background-color: #ffffff;
@@ -45,14 +45,14 @@ main {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.5s ease;
     position: relative;
     display: flex;
-    justify-content: center; /* Horizontally center the image */
-    align-items: center; /* Vertically center the image */
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     background: linear-gradient(45deg, #8fbc8f, #b0e5a0);
 }
 
 /* Image inside card */
-.card img {
+.user-home-wrapper .card img {
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -60,35 +60,35 @@ main {
 }
 
 /* Hover Effect for Card */
-.card:hover {
+.user-home-wrapper .card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     background: linear-gradient(45deg, #76c777, #90eb86); /* Animate background on hover */
 }
 
 /* Hover image effect */
-.card:hover img {
+.user-home-wrapper .card:hover img {
     opacity: 0.8;
 }
 
 /* Card Content */
-.card-content {
+.user-home-wrapper .card-content {
     padding: 20px;
     text-align: center;
 }
 
-.card-content a {
+.user-home-wrapper .card-content a {
     color: #076213;
 }
 
-.card h3 {
+.user-home-wrapper .card h3 {
     font-size: 1.5em;
     font-weight: 500;
     color: #076213;
 }
 
 /* Buttons */
-.btn {
+.user-home-wrapper .btn {
     padding: 8px 12px;
     background-color: #21583a;
     color: #fff;
@@ -99,7 +99,7 @@ main {
     transition: background-color 0.3s ease;
 }
 
-a{
+/* Anchor Reset */
+.user-home-wrapper a {
     text-decoration: none !important;
 }
-
