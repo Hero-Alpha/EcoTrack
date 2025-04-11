@@ -14,7 +14,7 @@ router.get("/companySignup", (req, res) => {
 
 // routes/companyRoutes.js or a common router file
 router.get('/userHome', (req, res) => {
-  res.render('userHome');
+  res.render('listings/userHome');
 });
 
 
