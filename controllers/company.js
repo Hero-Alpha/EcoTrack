@@ -23,7 +23,7 @@ exports.createCompany = async (req, res) => {
     const newCompany = new Company({ name, address, email, contact });
     await newCompany.save();
     console.log("✅ Company saved!");
-    res.redirect('listings/userHome');
+    res.render('listings/userHome');
   } catch (error) {
     console.error("❌ Failed to save company:", error);
     res.status(400).json({ error: error.message });
