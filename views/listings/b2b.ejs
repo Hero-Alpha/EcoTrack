@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate-user") %>
+
+<style>
+    main.container {
+        padding: 2rem;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    form {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f1f8f4;
+        border-radius: 10px;
+    }
+
+    label {
+        font-weight: 600;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input[type="text"], input[type="checkbox"] {
+        margin: 10px 0;
+        padding: 8px;
+        width: 100%;
+        max-width: 400px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #09570a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0a6f0c;
+    }
+</style>
+
+<body>
+    <main class="container">
+        <h2>Business to Business Connect</h2>
+        <p>Find the most eco-friendly logistics partners for your business.</p>
+    
+        <form action="/ecoConnect/match" method="POST">
+            <label>Your Location:</label>
+            <input type="text" name="location" required>
+    
+            <label>Select Required Services:</label>
+            <div>
+                <label><input type="checkbox" name="services" value="Road"> Road</label>
+                <label><input type="checkbox" name="services" value="Air"> Air</label>
+                <label><input type="checkbox" name="services" value="Rail"> Rail</label>
+                <label><input type="checkbox" name="services" value="Sea"> Sea</label>
+            </div>
+    
+            <button type="submit">Find Partners</button>
+        </form>
+    </main>
+</body>

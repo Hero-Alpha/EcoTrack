@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Green Logistics",
+      "location": "Delhi",
+      "services": ["Road", "Air"],
+      "emissionScore": 60,
+      "rating": 4.5,
+      "contact": "green@logistics.com"
+    },
+    {
+      "name": "EcoShip",
+      "location": "Delhi",
+      "services": ["Rail", "Air"],
+      "emissionScore": 68,
+      "rating": 4.2,
+      "contact": "eco@ship.com"
+    },
+    {
+      "name": "Bay Area Logistics",
+      "location": "San Francisco",
+      "services": ["Road", "Sea"],
+      "emissionScore": 72,
+      "rating": 4.3,
+      "contact": "bay@logistics.com"
+    }
+  ]
+  

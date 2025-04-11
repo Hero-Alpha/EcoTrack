@@ -34,9 +34,9 @@ const deliveryOptions = [
     price: "₹6.99",
     co2Savings: "3.1",
     ecoFriendly: true,
-    weight: 10,
+    weight: 1,
     distance: 50,
-    tripCount: 4,
+    tripCount: 1,
   },
 ];
 

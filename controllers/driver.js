@@ -21,7 +21,7 @@ exports.createDriver = async (req, res) => {
     const newDriver = new Driver(req.body);
     await newDriver.save();
     console.log("✅ Driver saved!");
-    res.status(201).json({ message: "Driver added successfully" });
+    res.redirect("/userHome");
   } catch (error) {
     console.error("❌ Failed to save driver:", error);
     res.status(400).json({ error: error.message });

@@ -131,3 +131,12 @@ tbody tr:nth-child(even) {
 .fulfilled {
     background-color: #28a745;
 }
+
+.order-table{
+    padding-top: 0 !important;
+}
+
+.stats{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}

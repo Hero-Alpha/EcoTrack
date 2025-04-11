@@ -1,0 +1,61 @@
+<% layout("/layouts/boilerplate-user") %>
+
+<style>
+    main.container {
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 20px;
+        background-color: #f4fdf5;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        color: #09570a;
+    }
+
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        padding-left: 1.2rem;
+    }
+
+    li {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 1.5rem;
+        color: #09570a;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    
+    <main class="container">
+        <h2>Matched Partners for <%= location %></h2>
+    
+        <% if (matched.length === 0) { %>
+            <p>No partners matched your selected services.</p>
+        <% } else { %>
+            <ul>
+                <% matched.forEach(partner => { %>
+                    <li>
+                        <h4><%= partner.name %></h4>
+                        <p>Services: <%= partner.services.join(", ") %></p>
+                        <p>Location: <%= partner.location %></p>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } %>
+    
+        <a href="/ecoConnect/b2b">← Try Again</a>
+    </main>
+</body>

@@ -48,11 +48,13 @@ const companyRouter = require("./routes/companyRoutes");
 const driverRouter = require("./routes/driverRoutes");
 const vehicleRouter = require("./routes/vehicleRoutes");
 const carbonRouter = require("./routes/carbonRoutes");
+const ecoConnectRoutes = require("./routes/ecoConnect");
 
 app.use("/", companyRouter);
 app.use("/drivers", driverRouter);
 app.use("/vehicles", vehicleRouter);
 app.use("/", carbonRouter);
+app.use("/ecoConnect", ecoConnectRoutes);
 
 // ---------------------- STATIC PAGE ROUTES ----------------------
 const staticRoutes = [
@@ -67,11 +69,16 @@ const staticRoutes = [
   { path: "/feature1", view: "listings/feature1" },
   { path: "/feature2", view: "listings/feature2" },
   { path: "/feature4", view: "listings/feature4" },
+  { path: "/partners", view: "listings/partners" },
 ];
 
 staticRoutes.forEach(({ path, view }) => {
   app.get(path, (req, res) => res.render(view));
 });
+
+
+app.get("/b2b", (req, res) => res.send("EcoTrack B2B Matchmaking Running"));
+app.listen(3000, () => console.log("Server running on http://localhost:4004"));
 
 // ---------------------- ERROR HANDLING ----------------------
 app.all("*", (req, res, next) => {

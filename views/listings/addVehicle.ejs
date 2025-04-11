@@ -1,73 +1,109 @@
 <% layout("/layouts/boilerplate-user") %>
 
 <div class="row mt-3">
-    <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
-        <h1 class="text-center mb-3">Add Your Vehicle</h1>
-        <p class="text-center text-muted">
-            Help customers understand your delivery methods by sharing your vehicle details. It's quick and easy!
-        </p>
-        <form action="/userHome" method="get" class="needs-validation" novalidate>
-            <!-- Vehicle Number -->
-            <div class="mb-3">
-                <label for="vehicleNumber" class="form-label">Vehicle Number</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-123"></i></span>
-                    <input
-                        class="form-control"
-                        type="text"
-                        name="vehicleNumber"
-                        id="vehicleNumber"
-                        placeholder="Enter vehicle number (e.g., AB-123-CD)"
-                        required
-                    >
-                </div>
-                <div class="invalid-feedback">Please provide a valid vehicle number!</div>
-            </div>
-            
-            <!-- Vehicle Type -->
-            <div class="mb-3">
-                <label for="vehicleType" class="form-label">Vehicle Type</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-truck-front"></i></span>
-                    <select
-                        class="form-control"
-                        name="vehicleType"
-                        id="vehicleType"
-                        required
-                    >
-                        <option value="">Select Vehicle Type</option>
-                        <option value="Bike">Bike</option>
-                        <option value="Car">Car</option>
-                        <option value="Truck">Truck</option>
-                        <option value="Van">Van</option>
-                    </select>
-                </div>
-                <div class="invalid-feedback">Please select a vehicle type!</div>
-            </div>
-            
-            <!-- Fuel Type -->
-            <div class="mb-3">
-                <label for="fuelType" class="form-label">Fuel Type</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-fuel-pump-fill"></i></span>
-                    <select
-                        class="form-control"
-                        name="fuelType"
-                        id="fuelType"
-                        required
-                    >
-                        <option value="">Select Fuel Type</option>
-                        <option value="Petrol">Petrol</option>
-                        <option value="Diesel">Diesel</option>
-                        <option value="CNG">CNG</option>
-                        <option value="Electric">Electric</option>
-                    </select>
-                </div>
-                <div class="invalid-feedback">Please select a fuel type!</div>
-            </div>
-            
-            <!-- Submit Button -->
-            <button class="btn btn-dark col-12 mt-3" type="submit">Add Vehicle</button>
-        </form>
-    </div>
+  <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+    <h1 class="text-center mb-3">Add Your Vehicle</h1>
+    <p class="text-center text-muted">
+      Help customers understand your delivery methods by sharing your vehicle details. It's quick and easy!
+    </p>
+    <form action="/vehicles/add-vehicle" method="POST" class="needs-validation" novalidate>
+
+      <!-- Vehicle Model -->
+      <div class="mb-3">
+        <label for="model" class="form-label">Vehicle Model</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-car-front-fill"></i></span>
+          <input
+            class="form-control"
+            type="text"
+            name="model"
+            id="model"
+            placeholder="e.g., Tata Ace, Honda Activa"
+            required
+          >
+        </div>
+        <div class="invalid-feedback">Please provide a vehicle model!</div>
+      </div>
+
+      <!-- Vehicle Type -->
+      <div class="mb-3">
+        <label for="type" class="form-label">Vehicle Type</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-truck-front"></i></span>
+          <select
+            class="form-control"
+            name="type"
+            id="type"
+            required
+          >
+            <option value="">Select Vehicle Type</option>
+            <option value="bike">Bike</option>
+            <option value="car">Car</option>
+            <option value="truck">Truck</option>
+            <option value="van">Van</option>
+          </select>
+        </div>
+        <div class="invalid-feedback">Please select a vehicle type!</div>
+      </div>
+
+      <!-- Number Plate -->
+      <div class="mb-3">
+        <label for="numberPlate" class="form-label">Vehicle Number Plate</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-123"></i></span>
+          <input
+            class="form-control"
+            type="text"
+            name="numberPlate"
+            id="numberPlate"
+            placeholder="Enter vehicle number (e.g., AB-123-CD)"
+            required
+          >
+        </div>
+        <div class="invalid-feedback">Please provide a valid number plate!</div>
+      </div>
+
+      <!-- Capacity -->
+      <div class="mb-3">
+        <label for="capacity" class="form-label">Load Capacity (in kg)</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-box-seam"></i></span>
+          <input
+            class="form-control"
+            type="number"
+            name="capacity"
+            id="capacity"
+            placeholder="e.g., 150"
+            min="1"
+            required
+          >
+        </div>
+        <div class="invalid-feedback">Please enter the vehicle's load capacity!</div>
+      </div>
+
+      <!-- Fuel Type -->
+      <div class="mb-3">
+        <label for="fuelType" class="form-label">Fuel Type</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-fuel-pump-fill"></i></span>
+          <select
+            class="form-control"
+            name="fuelType"
+            id="fuelType"
+            required
+          >
+            <option value="">Select Fuel Type</option>
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+            <option value="CNG">CNG</option>
+            <option value="electric">Electric</option>
+          </select>
+        </div>
+        <div class="invalid-feedback">Please select a fuel type!</div>
+      </div>
+
+      <!-- Submit Button -->
+      <button class="btn btn-dark col-12 mt-3" type="submit">Add Vehicle</button>
+    </form>
+  </div>
 </div>

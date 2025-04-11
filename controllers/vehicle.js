@@ -21,7 +21,7 @@ exports.createVehicle = async (req, res) => {
     const newVehicle = new Vehicle(req.body);
     await newVehicle.save();
     console.log("✅ Vehicle saved!");
-    res.status(201).json({ message: "Vehicle added successfully" });
+    res.redirect("/userHome");
   } catch (error) {
     console.error("❌ Failed to save vehicle:", error);
     res.status(400).json({ error: error.message });
